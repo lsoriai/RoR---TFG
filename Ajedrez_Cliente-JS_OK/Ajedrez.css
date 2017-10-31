@@ -1,0 +1,45 @@
+body{
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #1a0a00;
+}
+
+h1{
+	color: #ff8133;
+}
+
+#tablero{
+	background: url(madera.jpg);
+	height: 400px;
+	width: 400px;
+	border-radius: 6px;
+	border-collapse: collapse;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/*Coloreamos el tablero empleando nth-child*/
+#tablero tr:nth-child(odd) td:nth-child(even),
+#tablero tr:nth-child(even) td:nth-child(odd){
+	background: rgba(0,0,0,.4);
+}
+
+#tablero td{
+	height: 50px;
+	width: 50px;
+	font-size: 37px;
+}
+
+.ficha_negra{
+	color: black;
+	text-shadow: 1px 1px 1px rgba(255,255,255,.6);
+}
+
+.ficha_blanca{
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+}
