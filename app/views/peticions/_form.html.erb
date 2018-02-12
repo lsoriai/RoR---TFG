@@ -1,0 +1,31 @@
+<%= form_with(model: peticion, local: true) do |form| %>
+  
+<div class='contenedor'>
+  <div class='tittle'><h2>Envia una petición</h2></div>
+  <div class='FormStyle'>
+    <ol class="form">
+      <ul>
+        <p> En esta sección podrás enviar una petición a un usuario para empezar una partida.
+            Solo será necesario que indiques el nombre de usuario del oponente en el recuardo.
+        </p>
+      </ul>
+
+        <% if peticion.errors.any? %>
+          <div class="error">
+            <% peticion.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% if message == "User2 can't be blank" %>
+                <ul><p>El usuario no existe. Introduce otro usuario</p></ul>
+              <% end %>
+            <% end %>
+            <ul><%= form.label :username %> <br> <%= form.text_field :user2 %></ul><br>
+            <ul> <%= form.submit "Enviar" %> </ul> <br>
+          </div>
+        <% else %>
+          <ul><%= form.label :username %> <br> <%= form.text_field :user2 %></ul><br>
+          <ul> <%= form.submit "Enviar" %> </ul> <br>
+        <% end %>
+    </ol>
+  </div>
+</div>
+<% end %>

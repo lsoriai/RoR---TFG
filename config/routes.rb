@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :peticions
+  resources :movements
+  resources :games
   get 'users/user'
-  
+
   devise_for :users
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @movement.game %>
+</p>
+
+<p>
+  <strong>N mov:</strong>
+  <%= @movement.n_mov %>
+</p>
+
+<p>
+  <strong>Figure:</strong>
+  <%= @movement.figure %>
+</p>
+
+<p>
+  <strong>Cord:</strong>
+  <%= @movement.cord %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @movement.color %>
+</p>
+
+<%= link_to 'Edit', edit_movement_path(@movement) %> |
+<%= link_to 'Back', movements_path %>

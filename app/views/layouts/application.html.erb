@@ -39,7 +39,8 @@
               <li><a href="#">Page 1-3</a></li>
             </ul>
           </li>
-          <li><a href="{{pathFor 'juego'}}"><i>JUEGA</i></a></li>
+          <li><%= link_to('JUEGA', new_peticion_path) %></li>
+          <li><%= link_to('Mis peticiones', peticions_path) %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>

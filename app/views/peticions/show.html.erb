@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User1:</strong>
+  <%= @peticion.user1 %>
+</p>
+
+<p>
+  <strong>User2:</strong>
+  <%= @peticion.user2 %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @peticion.estado %>
+</p>
+
+<%= link_to 'Edit', edit_peticion_path(@peticion) %> |
+<%= link_to 'Back', peticions_path %>

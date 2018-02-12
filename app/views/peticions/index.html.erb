@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class='contenedor'>
+  <div class='tittle'><h2>Tus peticiones</h2></div>
+  <div  class='PeticionesStyle'>
+    <div class="row">
+      <div class="col-md-8">SOLICITANTE</div>
+      <div class="col-md-4"></div>
+    </div>
+    <hr class="linea">
+    <div class="row">
+      <% @peticions.each do |peticion| %>
+        <div class="col-md-8"><%= peticion.user1.username %>
+          <span>   quiere comenzar una partida</span>
+        </div>
+        <div class="col-md-4">
+          <button>Jugar</button>
+          <button>Eliminar petición</button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<%= link_to '¿Quieres solicitar una partida a un usuario?', new_peticion_path %>
+
