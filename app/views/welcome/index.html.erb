@@ -1,2 +1,31 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<!--Cuando hacemos render @messages automaticamente busca la vista
+_message.html.erb e imprime mensaje por mensaje, segun venga indicado
+en la vista parcial-->
+
+<h1>Chat room</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                </div>
+                <div class="panel-body">
+	                <div id="messages">
+					  <%= render @messages %>
+					</div>
+				</div>
+                <div class="panel-footer">
+                    <form>
+					  <label>Say something:</label><br>
+					  <input type="text" data-behavior="room_speaker">
+					</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

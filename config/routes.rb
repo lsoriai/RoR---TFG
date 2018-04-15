@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  #config/routes.rb
+  # Serve websocket cable requests in-process
+  # mount ActionCable.server => '/cable'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
